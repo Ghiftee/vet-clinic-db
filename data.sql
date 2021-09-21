@@ -15,7 +15,7 @@ VALUES('Devimon', '2017-05-12', 5, true, 11);
 /* Query and update table */
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
-VALUES('Charmander', '2020-02-08', 0, false, 11);
+VALUES('Charmander', '2020-02-08', 0, false, -11);
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
 VALUES('Plantmon', '2022-11-15', 2, true, -5.7);
