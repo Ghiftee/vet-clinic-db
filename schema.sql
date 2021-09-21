@@ -3,9 +3,8 @@
 CREATE DATABASE vet_clinic;
 
 CREATE TABLE animals (
-    name varchar(100)
-  id INTEGER,
-  name TEXT,
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
   date_of_birth DATE,
   escape_attempts INTEGER,
   neutered BOOLEAN,
