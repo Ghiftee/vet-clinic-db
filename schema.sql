@@ -16,15 +16,16 @@ ALTER TABLE animals ADD COLUMN species VARCHAR(100);
 -- Query multiple tables
 
 CREATE TABLE owners (
-  id SERIAL PRIMARY KEY,
-  full_name VARCHAR(100),
-  date_of_birth DATE,
-  age INTEGER
+  id INT GENERATED ALWAYS AS IDENTITY,
+  full_name VARCHAR(20),
+  age INT,
+  PRIMARY KEY(id)
 );
 
 CREATE TABLE species (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100)
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(20),
+  PRIMARY KEY(id)
 );
 
 ALTER TABLE animals DROP COLUMN species;
