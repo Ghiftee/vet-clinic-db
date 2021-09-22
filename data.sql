@@ -32,7 +32,7 @@ VALUES('Boarmon', '2005-06-07', 7, true, 20.04);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
 VALUES('Blossom', '1998-10-13', 3, true, 17);
 
--- Query multiple tables
+/* Query multiple tables */
 
 INSERT INTO owners (full_name, age) VALUES('Sam Smith', 34);
 INSERT INTO owners (full_name, age) VALUES('Jennifer Orwell', 19);

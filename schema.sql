@@ -13,7 +13,7 @@ CREATE TABLE animals (
 
 ALTER TABLE animals ADD COLUMN species VARCHAR(100);
 
--- Query multiple tables
+/* Query multiple tables */
 
 CREATE TABLE owners (
   id INT GENERATED ALWAYS AS IDENTITY,
