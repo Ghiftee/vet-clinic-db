@@ -85,3 +85,6 @@ SELECT owners.full_name, COUNT(animals.owner_id) FROM animals
     FULL OUTER JOIN owners 
     ON animals.owner_id = owners.id
     GROUP BY owners.id;
+
+/* Add join table for visits */
+
