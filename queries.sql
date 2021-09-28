@@ -140,3 +140,15 @@ SELECT species.name, COUNT(visits.animal_id) FROM visits
     WHERE vets.name = 'Maisy Smith'
     GROUP BY species.name
     ORDER BY COUNT(visits.animal_id) DESC LIMIT 1;
+
+/* Performance audit */
+
+-- Before indexing
+explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
+explain analyze SELECT * FROM visits where vet_id = 2;
+explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+-- After indexing
+explain analyze SELECT COUNT(animal_id) FROM visits where animal_id = 4;
+explain analyze SELECT vet_id FROM visits where vet_id = 2;
+explain analyze SELECT email FROM owners where email = 'owner_18327@mail.com';
